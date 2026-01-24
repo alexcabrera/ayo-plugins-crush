@@ -26,17 +26,8 @@
       "required": false,
       "arg_template": "--small-model {{value}}",
       "omit_if_empty": true
-    },
-    {
-      "name": "working_dir",
-      "description": "Working directory for the task. Defaults to current directory.",
-      "type": "string",
-      "required": false,
-      "omit_if_empty": true
     }
   ],
   "timeout": 600,
-  "working_dir": "param",
-  "allow_any_dir": true,
   "depends_on": ["crush"]
 }
