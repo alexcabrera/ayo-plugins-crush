@@ -1,0 +1,41 @@
+{
+  "name": "crush",
+  "description": "Invoke Crush to perform complex source code tasks. Crush is a powerful coding agent that can create, modify, refactor, debug, and test code across multiple files.",
+  "command": "crush",
+  "args": ["run", "--quiet"],
+  "parameters": [
+    {
+      "name": "prompt",
+      "description": "Detailed description of the coding task to accomplish. Be specific about objectives, scope, constraints, and success criteria.",
+      "type": "string",
+      "required": true,
+      "position": 0
+    },
+    {
+      "name": "model",
+      "description": "Model to use for the task (e.g., 'claude-sonnet-4', 'gpt-4.1'). Pass through from model context.",
+      "type": "string",
+      "required": false,
+      "arg_template": "--model {{value}}",
+      "omit_if_empty": true
+    },
+    {
+      "name": "small_model",
+      "description": "Small model to use for auxiliary tasks like generating commit messages.",
+      "type": "string",
+      "required": false,
+      "arg_template": "--small-model {{value}}",
+      "omit_if_empty": true
+    },
+    {
+      "name": "working_dir",
+      "description": "Working directory for the task. Defaults to current directory.",
+      "type": "string",
+      "required": false,
+      "omit_if_empty": true
+    }
+  ],
+  "timeout": 600,
+  "working_dir": "param",
+  "depends_on": ["crush"]
+}

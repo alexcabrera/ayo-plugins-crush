@@ -1,0 +1,15 @@
+{
+  "name": "crush",
+  "version": "1.0.0",
+  "description": "Crush coding agent for ayo - handles complex source code tasks including multi-file refactoring, feature implementation, debugging, and test creation",
+  "author": "alexcabrera",
+  "repository": "https://github.com/alexcabrera/ayo-plugins-crush",
+  "license": "MIT",
+  "agents": ["@crush"],
+  "skills": ["crush-coding"],
+  "tools": ["crush"],
+  "dependencies": {
+    "binaries": ["crush"]
+  },
+  "ayo_version": ">=0.2.0"
+}
