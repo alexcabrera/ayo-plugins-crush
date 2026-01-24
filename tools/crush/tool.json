@@ -37,5 +37,6 @@
   ],
   "timeout": 600,
   "working_dir": "param",
+  "allow_any_dir": true,
   "depends_on": ["crush"]
 }
