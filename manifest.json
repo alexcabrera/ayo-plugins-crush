@@ -8,6 +8,9 @@
   "agents": ["@crush"],
   "skills": ["crush-coding"],
   "tools": ["crush"],
+  "delegates": {
+    "coding": "@crush"
+  },
   "dependencies": {
     "binaries": ["crush"]
   },
