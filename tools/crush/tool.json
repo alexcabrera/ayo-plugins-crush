@@ -29,5 +29,6 @@
     }
   ],
   "timeout": 600,
-  "depends_on": ["crush"]
+  "depends_on": ["crush"],
+  "spinner_style": "crush"
 }
