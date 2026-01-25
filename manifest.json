@@ -12,7 +12,14 @@
     "coding": "@crush"
   },
   "dependencies": {
-    "binaries": ["crush"]
+    "binaries": [
+      {
+        "name": "crush",
+        "install_hint": "Crush is an AI-powered coding agent. Install with Go or download from GitHub.",
+        "install_cmd": "go install github.com/charmbracelet/crush@latest",
+        "install_url": "https://github.com/charmbracelet/crush"
+      }
+    ]
   },
   "ayo_version": ">=0.2.0"
 }
