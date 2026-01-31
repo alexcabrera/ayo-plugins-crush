@@ -1,0 +1,5 @@
+{
+  "name": "crush",
+  "description": "Renders Crush coding agent tool calls",
+  "max_lines": 20
+}

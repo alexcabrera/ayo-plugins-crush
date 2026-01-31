@@ -1,0 +1,23 @@
+{{- /* Status icon */ -}}
+{{- $icon := icon "pending" -}}
+{{- if .IsError -}}
+  {{- $icon = icon "error" -}}
+{{- else if not .IsPending -}}
+  {{- if not .IsRunning -}}
+    {{- $icon = icon "success" -}}
+  {{- else -}}
+    {{- $icon = icon "running" -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Header with tool name and prompt */ -}}
+{{- $prompt := index .Params "prompt" | printf "%s" -}}
+{{- $truncatedPrompt := truncate 60 $prompt -}}
+{{ $icon }} {{ style "#d4879c" "Crush" }} {{ style "#6c6c6c" $truncatedPrompt }}
+{{- if and (not .IsPending) (not .IsRunning) -}}
+
+{{- /* Body: Result content (markdown would be nice but templates can't do glamour) */ -}}
+  {{- if .Result -}}
+  {{ trim .Result | truncate 2000 }}
+  {{- end -}}
+{{- end -}}
